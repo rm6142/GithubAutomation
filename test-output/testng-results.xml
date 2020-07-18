@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite1" duration-ms="43901" started-at="2020-07-17T17:03:07Z" finished-at="2020-07-17T17:03:51Z">
+    <groups>
+    </groups>
+    <test name="Regression1" duration-ms="43901" started-at="2020-07-17T17:03:07Z" finished-at="2020-07-17T17:03:51Z">
+      <class name="com.github.Automate.AutomateRepository">
+        <test-method status="PASS" signature="WebDriverManagerTest()[pri:0, instance:com.github.Automate.AutomateRepository@148080bb]" name="WebDriverManagerTest" is-config="true" duration-ms="13090" started-at="2020-07-17T17:03:07Z" finished-at="2020-07-17T17:03:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- WebDriverManagerTest -->
+        <test-method status="PASS" signature="CreateRepository()[pri:0, instance:com.github.Automate.AutomateRepository@148080bb]" name="CreateRepository" duration-ms="5211" started-at="2020-07-17T17:03:20Z" finished-at="2020-07-17T17:03:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateRepository -->
+        <test-method status="PASS" signature="CreateIssue()[pri:0, instance:com.github.Automate.AutomateRepository@148080bb]" name="CreateIssue" duration-ms="12235" started-at="2020-07-17T17:03:26Z" depends-on-methods="com.github.Automate.AutomateRepository.CreateRepository" finished-at="2020-07-17T17:03:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateIssue -->
+        <test-method status="PASS" signature="commentToIssue()[pri:0, instance:com.github.Automate.AutomateRepository@148080bb]" name="commentToIssue" duration-ms="2007" started-at="2020-07-17T17:03:38Z" depends-on-methods="com.github.Automate.AutomateRepository.CreateIssue, com.github.Automate.AutomateRepository.CreateRepository" finished-at="2020-07-17T17:03:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- commentToIssue -->
+        <test-method status="PASS" signature="IssueMentioninCommentsLinktoIssue()[pri:0, instance:com.github.Automate.AutomateRepository@148080bb]" name="IssueMentioninCommentsLinktoIssue" duration-ms="6409" started-at="2020-07-17T17:03:40Z" depends-on-methods="com.github.Automate.AutomateRepository.CreateIssue, com.github.Automate.AutomateRepository.CreateRepository, com.github.Automate.AutomateRepository.commentToIssue" finished-at="2020-07-17T17:03:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- IssueMentioninCommentsLinktoIssue -->
+        <test-method status="PASS" signature="DeleteRepository()[pri:0, instance:com.github.Automate.AutomateRepository@148080bb]" name="DeleteRepository" duration-ms="4867" started-at="2020-07-17T17:03:46Z" depends-on-methods="com.github.Automate.AutomateRepository.CreateIssue, com.github.Automate.AutomateRepository.CreateRepository, com.github.Automate.AutomateRepository.commentToIssue, com.github.Automate.AutomateRepository.IssueMentioninCommentsLinktoIssue" finished-at="2020-07-17T17:03:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DeleteRepository -->
+      </class> <!-- com.github.Automate.AutomateRepository -->
+    </test> <!-- Regression1 -->
+  </suite> <!-- Suite1 -->
+</testng-results>

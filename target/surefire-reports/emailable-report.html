@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>TestNG Report</title>
+<style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}.invisible {display:none}</style>
+</head>
+<body>
+<table>
+<tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
+<tr><th colspan="7">Suite1</th></tr>
+<tr><td><a href="#t0">Regression1</a></td><td class="num">0</td><td class="num attn">1</td><td class="num">0</td><td class="num">4,060</td><td></td><td></td></tr>
+</table>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite1</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Regression1 &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">com.github.Automate.AutomateRepository</td><td><a href="#m0">WebDriverManagerTest</a></td><td rowspan="1">1594989708060</td><td rowspan="1">3993</td></tr><tr><th colspan="4">Regression1 &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">com.github.Automate.AutomateRepository</td><td><a href="#m1">CreateRepository</a></td><td rowspan="1">1594989712070</td><td rowspan="1">0</td></tr></tbody>
+</table>
+<h2>Regression1</h2><h3 id="m0">com.github.Automate.AutomateRepository#WebDriverManagerTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.SessionNotCreatedException: session not created: This version of ChromeDriver only supports Chrome version 84
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-AMBJLN2&apos;, ip: &apos;192.168.1.4&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_251&apos;
+Driver info: driver.version: ChromeDriver
+remote stacktrace: Backtrace:
+	Ordinal0 [0x012687E3+2852835]
+	Ordinal0 [0x01155BB1+1727409]
+	Ordinal0 [0x0102E4B9+517305]
+	Ordinal0 [0x00FC0BA0+68512]
+	Ordinal0 [0x00FBD3A0+54176]
+	Ordinal0 [0x00FDD9F7+186871]
+	Ordinal0 [0x00FDD7FD+186365]
+	Ordinal0 [0x00FDB70B+177931]
+	Ordinal0 [0x00FC2584+75140]
+	Ordinal0 [0x00FC3650+79440]
+	Ordinal0 [0x00FC35E9+79337]
+	Ordinal0 [0x0116AD5C+1813852]
+	GetHandleVerifier [0x0138C616+1075574]
+	GetHandleVerifier [0x0138C367+1074887]
+	GetHandleVerifier [0x01397497+1120247]
+	GetHandleVerifier [0x0138CC16+1077110]
+	Ordinal0 [0x01163206+1782278]
+	Ordinal0 [0x0116C3BB+1819579]
+	Ordinal0 [0x0116C523+1819939]
+	Ordinal0 [0x01182B45+1911621]
+	BaseThreadInitThunk [0x770CF989+25]
+	RtlGetAppContainerNamedObjectPath [0x77AA7084+228]
+	RtlGetAppContainerNamedObjectPath [0x77AA7054+180]
+
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:126)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:499)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:486)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:152)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:464)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
+	at com.github.Automate.AutomateRepository.WebDriverManagerTest(AutomateRepository.java:22)
+... Removed 36 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.github.Automate.AutomateRepository#CreateRepository</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.SessionNotCreatedException: session not created: This version of ChromeDriver only supports Chrome version 84
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-AMBJLN2&apos;, ip: &apos;192.168.1.4&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_251&apos;
+Driver info: driver.version: ChromeDriver
+remote stacktrace: Backtrace:
+	Ordinal0 [0x012687E3+2852835]
+	Ordinal0 [0x01155BB1+1727409]
+	Ordinal0 [0x0102E4B9+517305]
+	Ordinal0 [0x00FC0BA0+68512]
+	Ordinal0 [0x00FBD3A0+54176]
+	Ordinal0 [0x00FDD9F7+186871]
+	Ordinal0 [0x00FDD7FD+186365]
+	Ordinal0 [0x00FDB70B+177931]
+	Ordinal0 [0x00FC2584+75140]
+	Ordinal0 [0x00FC3650+79440]
+	Ordinal0 [0x00FC35E9+79337]
+	Ordinal0 [0x0116AD5C+1813852]
+	GetHandleVerifier [0x0138C616+1075574]
+	GetHandleVerifier [0x0138C367+1074887]
+	GetHandleVerifier [0x01397497+1120247]
+	GetHandleVerifier [0x0138CC16+1077110]
+	Ordinal0 [0x01163206+1782278]
+	Ordinal0 [0x0116C3BB+1819579]
+	Ordinal0 [0x0116C523+1819939]
+	Ordinal0 [0x01182B45+1911621]
+	BaseThreadInitThunk [0x770CF989+25]
+	RtlGetAppContainerNamedObjectPath [0x77AA7084+228]
+	RtlGetAppContainerNamedObjectPath [0x77AA7054+180]
+
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:126)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:499)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:486)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:152)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:464)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
+	at com.github.Automate.AutomateRepository.WebDriverManagerTest(AutomateRepository.java:22)
+... Removed 36 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+</body>
+</html>
