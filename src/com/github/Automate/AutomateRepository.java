@@ -56,7 +56,7 @@ public class AutomateRepository {
     public void CreateRepository()
     {
 		//Clicking on new Repository
-		driver.findElement(By.xpath("//h2[contains(text(),' Re')]/a[1]")).click();
+		driver.findElement(By.xpath("//h2[contains(text(),' Re')]/a[1] | (//div/a[contains(text(),'Create repository') and @href='/new'])[1]")).click();
 		String RepoName="Repo"+Calendar.getInstance().getTimeInMillis();
 		//Set Repository Name
 		driver.findElement(By.xpath("//dd/input[@id='repository_name']")).sendKeys(RepoName);
@@ -128,7 +128,6 @@ public class AutomateRepository {
 	public void IssueMentioninCommentsLinktoIssue() {
 		WebElement issueHeader=driver.findElement(By.xpath("//h1[contains(@class,'gh-header')]"));
 		String issueName=issueHeader.getAttribute("innerText");
-		System.out.println(issueName);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		WebElement btnClose=driver.findElement(By.xpath("//button[@name='comment_and_close']"));
 		js.executeScript("arguments[0].scrollIntoView();", btnClose);
@@ -153,7 +152,6 @@ public class AutomateRepository {
 		btnDeleteRepo.click();
 		driver.manage().timeouts().implicitlyWait(2 ,TimeUnit.SECONDS);
 		String strRepoName=driver.getCurrentUrl().replaceAll("https://github.com/","").replaceAll("/settings", "");
-		System.out.println(strRepoName);
 		WebElement inputConfirmation=driver.findElement(By.xpath("//input[contains(@aria-label,'Type in the name of the repository to confirm that you want to delete this repository.') ]"));
 		wait.until(ExpectedConditions.visibilityOf(inputConfirmation));
 		inputConfirmation.sendKeys(strRepoName);
